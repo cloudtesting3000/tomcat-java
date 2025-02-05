@@ -27,6 +27,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'ashrafosman3000-docker'
-    repository: 'ashrafosman3000/javaapp'
+    repository: $(docker_repo)
     command: 'buildAndPush'
     Dockerfile: '**/AzureDockerfile'
