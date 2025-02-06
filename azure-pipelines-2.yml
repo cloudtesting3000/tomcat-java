@@ -1,29 +1,22 @@
-# Docker
-# Build a Docker image
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+# Comments 1111111111111111
+
 
 trigger:
 - master
-
-resources:
-- repo: self
+pool:
+  vmImage: ubuntu-latest
 
 variables:
   tag: '$(Build.BuildId)'
 
 stages:
-- stage: Build
+- stage: stage1
   displayName: Build image
   jobs:
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: ubuntu-latest
+  - job: job1_s1
+    displayName: job1-s1
     steps:
-    - task: Docker@2
-      displayName: Build an image
-      inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: |
-          $(tag)
+    - task: Ant@1
+      displayName: task1-job1-s1
+       - script:"echo task1-job1-s1"
+
