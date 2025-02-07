@@ -1,6 +1,5 @@
 # Comments 1111111111111111
 
-
 trigger:
 - master
 pool:
@@ -15,9 +14,6 @@ stages:
   jobs:
   - job: job1_s1
     displayName: job1-s1
-    steps:
-    - task: Ant@1
-      displayName: task1-job1-s1
-       - script:|
-              echo "task1-job1-s1"
+    steps:  
+    - script: echo "task1-job1-s1"
 
