@@ -18,5 +18,6 @@ stages:
     steps:
     - task: Ant@1
       displayName: task1-job1-s1
-       - script:echo "task1-job1-s1"
+       - script:|
+              echo "task1-job1-s1"
 
